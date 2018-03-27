@@ -124,4 +124,49 @@ return comments.filter(function(comment){
 ComentsForPost(posts,comments)
 
 
+// Find Filter
+var users=[
+  {name:'Linju'},
+  {name:'Tony'},
+  {name:'Diya'}
+  ];
+
+
+users.find(function(user){
+  return user.name ==='Tony';
+});
+
+
+// Find Filter
+
+function car(model){
+ this.model=model;
+};
+
+var cars=[
+  new car('alto'),
+  new car('i20'),
+  new car('swift')
+  ];
+
+cars.find(function(car){
+return car.model='alto'
+});
+
+// Find Filter Scenario 3
+
+var posts = [
+  {id:1,title:'New Post'},
+  {id:2,title:'Old Post'}
+  ];
+
+var comment={postId:1,content:'Great Post'}
+
+function postForComment(posts,comment){
+  return posts.find(function(post){
+  return post.id===comment.postId;
+  });
+}
+
+postForComment(posts,comment)
 
