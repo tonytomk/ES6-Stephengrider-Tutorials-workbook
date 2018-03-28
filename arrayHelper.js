@@ -170,3 +170,52 @@ function postForComment(posts,comment){
 
 postForComment(posts,comment)
 
+
+//Every filter
+//do && on each item and gets the result.
+
+var computers=[
+  {name:'Apple', ram:24},
+  {name:'compaq',ram:4},
+  {name:'Acer',ram:16}
+];
+
+computers.every(function(computer){
+  return computer.ram>4
+});
+
+
+//Some filter
+//do || on each item and gets the result.
+
+var computers=[
+  {name:'Apple', ram:24},
+  {name:'compaq',ram:4},
+  {name:'Acer',ram:16}
+];
+
+computers.some(function(computer){
+  return computer.ram>4
+});
+
+
+//Every filter scenario 2
+
+function Field(value){
+	this.value=value;
+}
+
+Field.prototype.validate=function(){
+	return this.value.length>0;
+}
+
+var username=new Field("2cool");
+var password=new Field("my_passwd");
+var birthdate=new Field("10/10/2010");
+
+var fields=[username,password,birthdate];
+
+fields.every(function(field){
+ return field.validate;
+});
+
