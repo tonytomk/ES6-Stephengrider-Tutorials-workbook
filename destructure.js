@@ -47,3 +47,27 @@ const [name,name1,...name4] 	= companies;
 name
 name1
 name4
+
+
+// Destructure Array
+// Scenario 3
+
+var companies=[
+  {name:'google',location:'US'},
+  {name:'flipkart',location:'IN'},
+  {name:'alibaba',location:'CN'}
+  ];
+
+
+const [{location,name}]=companies
+location
+name
+
+
+const Google={
+  locations:['Mountain View','New York']
+};
+
+const {locations:[location1]}=Google;
+location1
+
