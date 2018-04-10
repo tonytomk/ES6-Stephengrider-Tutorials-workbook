@@ -71,3 +71,20 @@ const Google={
 const {locations:[location1]}=Google;
 location1
 
+
+function signup({username,password,email,dob,city}){
+// create new user
+ 
+}
+
+const user={
+username:'myname',
+password:'mypwd',
+email:'my@em.com',
+dob:'1/1/2018',
+city:'blre'
+}
+
+//signup('chakki','mypwd','tt@t.com','1/1/2018','blre');
+
+signup(user);
