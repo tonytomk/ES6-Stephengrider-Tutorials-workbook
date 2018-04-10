@@ -88,3 +88,29 @@ city:'blre'
 //signup('chakki','mypwd','tt@t.com','1/1/2018','blre');
 
 signup(user);
+
+
+const points=[
+  [4,5],
+  [10,1],
+  [0,40]
+];
+
+/*points.map(function(pair){
+   const [x,y]=pair;
+  return {x:x,y:y}
+})*/
+
+
+/*points.map(pair=>{
+   const [x,y]=pair;
+  return {x:x,y:y}
+});*/
+
+/*points.map(([x,y])=>{
+  return {x:x, y:y};
+})*/
+
+points.map(([x,y])=>{
+  return {x, y};
+})
