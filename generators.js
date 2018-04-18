@@ -209,3 +209,39 @@ names.push(name);
 names
 
 
+//Example 8
+// []array helpers map & foreach do not work with generators
+
+class Comments{
+
+constructor(content,children){
+this.content=content;
+this.children=children;
+}
+  
+*[Symbol.iterator](){
+   yield this.content;
+  for(let child of this.children)
+  { 
+    yield* child;
+  }
+}
+  
+}
+
+const children=[
+new Comments('good comment',[]),
+new Comments('bad comment',[]),
+new Comments( 'meh',[])
+];
+
+const tree=new Comments('Great post!',children)
+
+const values=[];
+
+for(let value of tree){
+values.push(value)
+}
+
+values
+
