@@ -174,3 +174,38 @@ names.push(name);
 }
 names
 
+// Example 7
+
+const testingTeam={
+	lead:'Linju',
+  tester:'divya',
+  
+  [Symbol.iterator]:function* (){
+   yield this.lead;
+   yield this.tester;
+  }
+};
+
+const engineeringTeam={
+	size:3,
+	department:'Engineering',
+  lead:'Tony',
+  manager:'Tom',
+  engineering:'Dave',
+  testingTeam,
+  [Symbol.iterator]:function* (){
+  yield this.lead;
+  yield this.manager;
+  yield this.department;
+  yield* this.testingTeam;
+  }
+};
+
+const names=[];
+
+for(let name of (engineeringTeam)){
+names.push(name);
+}
+names
+
+
